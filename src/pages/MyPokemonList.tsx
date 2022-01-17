@@ -13,7 +13,7 @@ import { ListContainer } from "../Components/ListContainer";
 import styled from "@emotion/styled";
 
 const DescriptionContainer = styled.div({
-  minHeight: "900px",
+  minHeight: "1000px",
 });
 
 const MyPokemonList: NextPage = () => {
@@ -54,7 +54,7 @@ const MyPokemonList: NextPage = () => {
   } else {
     return (
       <DescriptionContainer>
-        <span>{`You don't have any Pokemon`}</span>
+        <span>{`You don't have any Pokemon. Time to Catch Some!`}</span>
       </DescriptionContainer>
     );
   }

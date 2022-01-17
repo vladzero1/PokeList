@@ -5,11 +5,15 @@ import PokemonLogo from "../../PokemonLogo.png";
 import Image from "next/image";
 import HamburgerNav from "../HamburgerNav/lazy";
 
+const FakeDiv = styled.div({
+  width: "80px",
+});
+
 const HeaderContainer = styled.div({
   height: "50px",
   display: "flex",
   alignContent: "center",
-  justifyContent: "left",
+  justifyContent: "space-between",
   borderBottom: "1px black solid",
 });
 
@@ -24,6 +28,7 @@ const Header: React.FC<{}> = () => {
         alt="Pokemon Logo"
         priority={true}
       />
+      <FakeDiv />
     </HeaderContainer>
   );
 };
