@@ -28,7 +28,7 @@ const PokemonListCard: React.FC<PokemonListCardProps> = ({
 }): JSX.Element => {
   return (
     <CardContainer>
-      <Link href={`/PokemonDetail/${name}`}>
+      <Link href={`/PokemonDetail/${name}`} passHref={true}>
         <PokemonIcon src={image} alt={"Pokemon Image"}></PokemonIcon>
       </Link>
 

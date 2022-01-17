@@ -54,7 +54,7 @@ const MyPokemonList: NextPage = () => {
   } else {
     return (
       <DescriptionContainer>
-        <span>You don't have any Pokemon</span>;
+        <span>{`You don't have any Pokemon`}</span>
       </DescriptionContainer>
     );
   }

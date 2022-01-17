@@ -19,10 +19,10 @@ const PokemonName = styled.span({
   width: "fit-content",
 });
 const ReleaseButtonContainer = styled.div({
-  display:"flex",
-  flexDirection:"column",
-  justifyContent:"center"
-})
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "center",
+});
 const ReleaseButton = styled.button({
   width: "70px",
   height: "30px",
@@ -50,13 +50,13 @@ export const MyPokemonListCard: React.FC<MyPokemonListCardProps> = ({
 }) => {
   return (
     <CardContainer>
-      <Link href={`/PokemonDetail/${name}`}>
+      <Link href={`/PokemonDetail/${name}`} passHref={true}>
         <PokemonIcon src={image} alt="Pokemon Icon" />
       </Link>
 
       <PokemonInfoContainer>
         <PokemonInfo>
-          <Link href={`/PokemonDetail/${name}`}>
+          <Link href={`/PokemonDetail/${name}`} passHref={true}>
             <PokemonName>
               {nickname} ({name})
             </PokemonName>

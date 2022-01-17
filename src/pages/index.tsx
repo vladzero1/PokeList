@@ -33,7 +33,9 @@ const PokemonList: NextPage = () => {
       owned: number;
     }) => <PokemonListCard image={image} name={name} owned={owned} />
   );
-
+  //to make sure we can build the project or it will stuck because of an error
+  MemoizedPokemonCard.displayName = "Pokemon Card"; 
+  
   // Pagination FetchMore updateQuery not used since it will trigger warning that the feature will be deleted on next release
   const loadMore = () => {
     if (data && data?.pokemons.count >= data?.pokemons.results.length) {
@@ -74,7 +76,7 @@ const PokemonList: NextPage = () => {
         <link rel="preconnect" href="https://graphql-pokeapi.graphcdn.app" />
         <link rel="dns-prefetch" href="https://raw.githubusercontent.com" />
       </Head>
-      <ListContainer >
+      <ListContainer>
         {data?.pokemons.results.map(({ image, name }) => {
           const owned = myPokemonData
             ? myPokemonData[name]
