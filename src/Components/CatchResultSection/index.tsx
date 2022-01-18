@@ -28,8 +28,7 @@ export const CatchResultSection: React.FC<CatchResultSectionProps> = ({
       {isSuccess ? (
         <>
           <TextWrapper>
-            <span>Success! </span>
-            <span>Give {name} an unique nickname</span>
+            <span>Success! Give {name} an unique nickname</span>
           </TextWrapper>
           <div>
             <label>Nickname: </label>

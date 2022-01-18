@@ -54,7 +54,6 @@ const PokemonDetail: NextPage = ({}) => {
 
           <CenteringContainer>
             <CatchPokemonSection
-              id={data ? data.pokemon.id : ""}
               name={data ? data?.pokemon.name : ""}
               image={data ? data?.pokemon.sprites.front_default : ""}
             />

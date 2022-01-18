@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import React, { useState } from "react";
 import { savePokemonImage } from "../../utils/pokemonDataHelper";
+import { randomCatch } from "../../utils/randomizeCatch";
 import { CatchResultSection } from "../CatchResultSection";
 
 const CatchButton = styled.button({
@@ -20,13 +21,11 @@ const CenteringContainer = styled.div({
 });
 
 interface CatchPokemonSectionProps {
-  id: string;
   name: string;
   image: string;
 }
 
 const CatchPokemonSection: React.FC<CatchPokemonSectionProps> = ({
-  id,
   name,
   image,
 }) => {
@@ -40,8 +39,7 @@ const CatchPokemonSection: React.FC<CatchPokemonSectionProps> = ({
   const [isCatching, setIsCatching] = useState(false);
 
   const catchButtonHandler = () => {
-    const num = Math.random();
-    const catchIsSuccess = num > 0.49 ? true : false;
+    const catchIsSuccess = randomCatch(50);
     setIsSuccess(catchIsSuccess);
     setIsCatching(catchIsSuccess);
     setIsDisabled(catchIsSuccess);
@@ -51,7 +49,10 @@ const CatchPokemonSection: React.FC<CatchPokemonSectionProps> = ({
     <FlexContainer>
       <CenteringContainer>
         <ResultContainer>
-          <CatchButton onClick={catchButtonHandler} disabled={isDisabled}>
+          <CatchButton
+            onClick={catchButtonHandler}
+            disabled={isDisabled}
+          >
             Catch!
           </CatchButton>
         </ResultContainer>

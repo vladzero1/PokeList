@@ -92,9 +92,8 @@ const PokemonList: NextPage = () => {
             />
           );
         })}
+        {error ? null : <LoadMoreButton target={target} isLoading={loading} />}
       </ListContainer>
-
-      {error ? null : <LoadMoreButton target={target} isLoading={loading} />}
     </>
   );
 };
