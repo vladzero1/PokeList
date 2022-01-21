@@ -1,4 +1,5 @@
-import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { ApolloClient, HttpLink, InMemoryCache } from "@apollo/client";
+import fetch from "cross-fetch";
 import { withApollo as createWithApollo } from "next-apollo";
 import { PokemonListData } from "../Types";
 
@@ -27,7 +28,11 @@ const client = new ApolloClient({
       },
     },
   }),
-  uri: "https://graphql-pokeapi.graphcdn.app",
+  link: new HttpLink({
+    uri: "https://graphql-pokeapi.graphcdn.app",
+    fetch: fetch,
+  }),
+  // uri: "https://graphql-pokeapi.graphcdn.app",
 });
 
 export default createWithApollo(client);

@@ -13,6 +13,7 @@
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@loadable/component": "^5.15.2",
+    "cross-fetch": "^3.1.5",
     "graphql": "^16.2.0",
     "next": "12.0.8",
     "next-apollo": "^5.0.7",
