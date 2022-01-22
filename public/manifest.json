@@ -3,19 +3,24 @@
   "short_name": "Poke List",
   "icons": [
     {
-      "src": "/pokemon_icon192x192.png",
-      "sizes": "192x192",
+      "src": "/pokemon_icon180x180.png",
+      "sizes": "180x180",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/pokemon_icon180x180.png",
-      "sizes": "180x180",
+      "src": "/pokemon_icon167x167.png",
+      "sizes": "167x167",
       "type": "image/png"
     },
     {
-      "src": "/pokemon_icon167x67.png",
-      "sizes": "167x167",
+      "src": "/pokemon_icon152x152.png",
+      "sizes": "152x152",
+      "type": "image/png"
+    },
+    {
+      "src": "/pokemon_icon192x192.png",
+      "sizes": "192x192",
       "type": "image/png"
     },
     {

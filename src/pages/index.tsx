@@ -8,7 +8,7 @@ import { MyPokemonData, PokemonListQueryData } from "../Types";
 import { loadMyPokemons } from "../utils/pokemonDataHelper";
 import { useIntersectionObserver } from "../utils/IntersectionObserver";
 import PokemonListCard from "../Components/PokemonListCard";
-import LoadMoreButton from "../Components/LoadMoreButton/lazy";
+import LoadMoreButton from "../Components/LoadMoreButton";
 import { ListContainer } from "../Components/ListContainer";
 
 const PokemonList: NextPage = () => {
@@ -34,8 +34,8 @@ const PokemonList: NextPage = () => {
     }) => <PokemonListCard image={image} name={name} owned={owned} />
   );
   //to make sure we can build the project or it will stuck because of an error
-  MemoizedPokemonCard.displayName = "Pokemon Card"; 
-  
+  MemoizedPokemonCard.displayName = "Pokemon Card";
+
   // Pagination FetchMore updateQuery not used since it will trigger warning that the feature will be deleted on next release
   const loadMore = () => {
     if (data && data?.pokemons.count >= data?.pokemons.results.length) {
@@ -92,8 +92,8 @@ const PokemonList: NextPage = () => {
             />
           );
         })}
-        {error ? null : <LoadMoreButton target={target} isLoading={loading} />}
       </ListContainer>
+      {error ? null : <LoadMoreButton target={target} isLoading={loading} />}
     </>
   );
 };
