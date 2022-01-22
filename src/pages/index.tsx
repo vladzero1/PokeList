@@ -17,7 +17,7 @@ const PokemonList: NextPage = () => {
   const { data, loading, error, fetchMore } = useQuery<PokemonListQueryData>(
     PokemonListQuery,
     {
-      variables: { limit: 20, offset: 0 },
+      variables: { limit: 30, offset: 0 },
       notifyOnNetworkStatusChange: true,
     }
   );
@@ -41,7 +41,7 @@ const PokemonList: NextPage = () => {
     if (data && data?.pokemons.count >= data?.pokemons.results.length) {
       fetchMore({
         variables: {
-          limit: 20,
+          limit: 30,
           offset: data.pokemons.nextOffset,
         },
         //#region code update Query if warning not issued

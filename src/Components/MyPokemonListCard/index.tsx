@@ -14,6 +14,7 @@ const PokemonInfo = styled.div({
   flexDirection: "column",
   justifyContent: "center",
   paddingLeft: "5px",
+  width: "100%",
 });
 const PokemonName = styled.span({
   width: "fit-content",
@@ -53,15 +54,14 @@ export const MyPokemonListCard: React.FC<MyPokemonListCardProps> = ({
       <Link href={`/PokemonDetail/${name}`} passHref={true}>
         <PokemonIcon src={image} alt="Pokemon Icon" />
       </Link>
-
       <PokemonInfoContainer>
-        <PokemonInfo>
-          <Link href={`/PokemonDetail/${name}`} passHref={true}>
+        <Link href={`/PokemonDetail/${name}`} passHref={true}>
+          <PokemonInfo>
             <PokemonName>
               {nickname} ({name})
             </PokemonName>
-          </Link>
-        </PokemonInfo>
+          </PokemonInfo>
+        </Link>
         <ReleaseButtonContainer>
           <ReleaseButton
             onClick={() => {

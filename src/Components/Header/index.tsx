@@ -4,6 +4,7 @@ import { MenuList } from "../../Constant";
 import PokemonLogo from "../../PokemonLogo.png";
 import Image from "next/image";
 import HamburgerNav from "../HamburgerNav/lazy";
+import Link from "next/link";
 
 const FakeDiv = styled.div({
   width: "80px",
@@ -21,13 +22,16 @@ const Header: React.FC<{}> = () => {
   return (
     <HeaderContainer aria-label="Header Container">
       <HamburgerNav list={MenuList} />
-      <Image
-        src={PokemonLogo}
-        width={110}
-        height={39}
-        alt="Pokemon Logo"
-        priority={true}
-      />
+      <Link href={"/"} passHref={true}>
+        <Image
+          src={PokemonLogo}
+          width={110}
+          height={39}
+          alt="Pokemon Logo"
+          priority={true}
+        />
+      </Link>
+
       <FakeDiv />
     </HeaderContainer>
   );
