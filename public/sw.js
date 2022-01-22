@@ -1,6 +1,6 @@
 self.addEventListener("install", function (event) {
   // Perform install steps
-  console.log("boom");
+  // console.log("boom");sc
 });
 self.addEventListener("fetch", function (event) {
   event.respondWith(

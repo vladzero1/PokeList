@@ -2,13 +2,11 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { Layout } from "../Components/Layout";
 import { useEffect } from "react";
-import path from "path";
 import Head from "next/head";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     if ("serviceWorker" in navigator) {
-      console.log("here");
       window.addEventListener("load", function () {
         navigator.serviceWorker.register("./sw.js").then(
           function (registration) {
@@ -29,6 +27,12 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <>
+      <Head>
+        <meta
+          name="viewport"
+          content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
+        />
+      </Head>
       <Layout>
         <Component {...pageProps} />
       </Layout>

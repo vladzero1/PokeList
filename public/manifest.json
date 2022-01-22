@@ -1,15 +1,25 @@
 {
-  "name": "Poke List",
+  "name": "Poke List App",
   "short_name": "Poke List",
   "icons": [
     {
-      "src": "/pokemon 192.png",
+      "src": "/pokemon_icon192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/pokemon 512.png",
+      "src": "/pokemon_icon180x180.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/pokemon_icon167x67.png",
+      "sizes": "167x167",
+      "type": "image/png"
+    },
+    {
+      "src": "/pokemon_icon512x512.png",
       "sizes": "512x512",
       "type": "image/png"
     }

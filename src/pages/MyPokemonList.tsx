@@ -11,6 +11,7 @@ import withApollo from "../utils/ApolloHelper";
 import { NextPage } from "next";
 import { ListContainer } from "../Components/ListContainer";
 import styled from "@emotion/styled";
+import Head from "next/head";
 
 const DescriptionContainer = styled.div({
   minHeight: "1000px",
@@ -32,6 +33,9 @@ const MyPokemonList: NextPage = () => {
   if (allPokemonId.length > 0) {
     return (
       <ListContainer>
+        <Head>
+          <meta name="theme-color" content="#ffffff" />
+        </Head>
         {allPokemonId.map((name) => {
           return myPokemonsData[name].map((nickname) => {
             return (
